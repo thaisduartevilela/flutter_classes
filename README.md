@@ -1,33 +1,40 @@
 # flutter_classes
 
-What are Widgets:
 
-The Basic Elements of Flutter which are Classes in Dart with manipulable methods and parameters to be able to bring our creativity to life, like LEGO bricks.
-We understand that Widgets can be related/connected (like Mothers and Daughters) through child/children parameters.
-Container:
+## 🔨 Projeto: Organizador de Tarefas
 
-A widget that allows the creation of a rectangular space with vertical size (height) and horizontal size (width), colors (color), only child (child), in addition to other parameters that we can check in the catalog of Documentation widgets.
-Stack:
+O projeto do curso consiste em um organizador pessoal de tarefas, com gameficação. Cada tarefa adicionada tem um nível e uma dificuldade, conforme o usuário sobe de nível ele pode verificar através de uma barra de progresso se está perto de concluir a maestria na tarefa desejada.
 
-A Widget with the power to draw its children one on top of the other, with parameters such as multiple children (children), alignment (alignment), in addition to other parameters that we can check in the Widgets catalog in the documentation.
-Column:
+![](https://raw.githubusercontent.com/Kakomo/alura_flutter_curso_1/Aula_2/flutter1_gif.gif)
 
-A Widget with the power to draw its children one next to the other vertically, with parameters such as multiple children (children), vertical alignment (mainAxisAlignment), horizontal alignment (crossAxisAligment), in addition to other parameters that we can check in the Widgets catalog in the documentation .
-Row:
+## ✔️ Técnicas e tecnologias
 
-A Widget with the power to draw its children next to each other horizontally, with parameters such as multiple children (children), horizontal alignment (mainAxisAlignment), vertical alignment (crossAxisAligment), in addition to other parameters that we can check in the Widgets catalog in the documentation .
-ElevatedButton:
+**Veja mais de perto o que você aprenderá sobre** :
+- `Widgets`: Elementos básicos do Flutter.
+- `Container`: Widget simples para desenhar na tela.
+- `Stack`: Widget que permite adicionar elementos um sobre o outro.
+- `Column`: Widget que permite adicionar elementos um ao lado do outro na vertical.
+- `Row`: Widget que permite adicionar elementos um ao lado do outro na horizonta.
+- `Text`: Widget que permite escrever textos na tela.
+- `ElevatedButton`: Widget com função de botão, que permite ações no projeto.
+- `Scaffold`: Widget que usa o Material Design.
+- `Stateless Widget`: Template de Widget para criar nossos próprios Widgets estáticos.
+- `Stateful Widget`: Template de Widget para criar nossos próprios Widgets dinâmicos.
+- `Image`: Widget que permite adicionar imagens ao projeto.
+- `AnimatedOpacity`: Widget animado que muda a opacidade dos elementos no projeto.
+- `Refatoração` : Conceito para organizar e melhorar o nosso projeto para exibir aos seus colegas!
 
-The First Button we created! It has action power with the onPressed parameter, in addition to the child parameter that allows adding a new Widget inside the ElevatedButton, in addition to other parameters that we can check in the Widgets catalog in the documentation.
-Text:
+ 
 
-The Widget responsible for using a String to show written information on the screen, in the format we want! With the style parameters we have the power to change the size, color and many other characteristics of our text.
-overflow:
 
-When we are not aware of space within our screen, our Widgets may be larger than the visible space, on these occasions the information in our Widgets may not be completely visible to the application user, losing important information due to lack of space. This defect is called Overflow.
-Widget Tree:
+## 🛠️ Abrir e rodar o projeto
 
-To make the relationship between parent Widgets and child Widgets clearer, we need to clearly understand the concept of the Widget Tree. We used some Android Studio tools to make our understanding of the tree easier. With Flutter Inspector and Layout Explorer we can understand how the Widgets are arranged on the screen, including viewing their parameters and limits!
-Design:
+**Para executar este projeto você precisa:**
 
-Where does art come into all this? Design is important so that our apps have a beautiful structure and a format that makes sense for mobile phones. Therefore, we saw the concepts of Material (Design created by google) and Cupertino (Design created by apple).
+- Ter uma IDE, que pode ser o  [Android Studio](https://developer.android.com/) instalado na sua máquina
+- Ter a [SDK do Flutter](https://docs.flutter.dev/get-started/install) na versão 3.0.0
+
+
+## 📚 Mais informações do curso
+
+Esse curso faz parte da [formação de Flutter da Alura](https://cursos.alura.com.br/formacao-flutter)
