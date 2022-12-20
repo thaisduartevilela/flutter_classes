@@ -4,9 +4,14 @@ void main() {
   runApp(const MyApp());
 }
 
-class MyApp extends StatelessWidget {
+class MyApp extends StatefulWidget {
   const MyApp({Key? key}) : super(key: key);
 
+  @override
+  State<MyApp> createState() => _MyAppState();
+}
+
+class _MyAppState extends State<MyApp> {
   // This widget is the root of your application.
   @override
   Widget build(BuildContext context) {
@@ -41,10 +46,16 @@ class MyApp extends StatelessWidget {
   }
 }
 
-class Task extends StatelessWidget {
+class Task extends StatefulWidget {
   final String nome;
   const Task(this.nome, {Key? key}) : super(key: key);
 
+  @override
+  State<Task> createState() => _TaskState();
+}
+
+class _TaskState extends State<Task> {
+  int nivel = 0;
   @override
   Widget build(BuildContext context) {
     return Padding(
@@ -56,27 +67,39 @@ class Task extends StatelessWidget {
               color: Colors.blue,
               height: 140,
             ),
-            Container(
-                color: Colors.white,
-                height: 100,
-                child: Row(
-                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
-                  children: [
-                    Container(
-                      color: Colors.black26,
-                      width: 72,
-                      height: 100,
-                    ),
-                    Container(
-                        width: 200,
-                        child: Text(
-                      nome,
-                      style: TextStyle(fontSize: 24),
-                    )),
-                    ElevatedButton(
-                        onPressed: () {}, child: Icon(Icons.arrow_drop_up))
-                  ],
-                )),
+            Column(
+              children: [
+                Container(
+                    color: Colors.white,
+                    height: 100,
+                    child: Row(
+                      mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                      children: [
+                        Container(
+                          color: Colors.black26,
+                          width: 72,
+                          height: 100,
+                        ),
+                        Container(
+                            width: 200,
+                            child: Text(
+                          widget.nome,
+                          style: TextStyle(fontSize: 24, overflow: TextOverflow.ellipsis),
+                        )),
+                        ElevatedButton(
+                            onPressed: () {
+                              setState((){
+                                nivel++;
+                              });
+                              print(nivel);
+                              }, child: Icon(Icons.arrow_drop_up))
+                      ],
+                    )
+                ),
+                Text('Nível:$nivel', style:TextStyle(color: Colors.white, fontSize:16),),
+              ],
+            ),
+
           ],
         ),
       ),
