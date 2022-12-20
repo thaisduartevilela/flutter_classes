@@ -81,25 +81,44 @@ class _TaskState extends State<Task> {
                           height: 100,
                         ),
                         Container(
-                            width: 200,
-                            child: Text(
-                          widget.nome,
-                          style: TextStyle(fontSize: 24, overflow: TextOverflow.ellipsis),
-                        )),
+                          width: 200,
+                          child: Text(
+                            widget.nome,
+                            style: TextStyle(
+                                fontSize: 24, overflow: TextOverflow.ellipsis),
+                          ),
+                        ),
                         ElevatedButton(
                             onPressed: () {
-                              setState((){
+                              setState(() {
                                 nivel++;
                               });
                               print(nivel);
-                              }, child: Icon(Icons.arrow_drop_up))
+                            },
+                            child: Icon(Icons.arrow_drop_up))
                       ],
-                    )
+                    )),
+                Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Padding(
+                      padding: const EdgeInsets.all(8.0),
+                      child: Container(
+                          child: LinearProgressIndicator(color: Colors.white, value: nivel/10,),
+                          width: 200,
+                      ),
+                    ),
+                    Padding(
+                      padding: const EdgeInsets.all(12.0),
+                      child: Text(
+                        'Nível:$nivel',
+                        style: TextStyle(color: Colors.white, fontSize: 16),
+                      ),
+                    ),
+                  ],
                 ),
-                Text('Nível:$nivel', style:TextStyle(color: Colors.white, fontSize:16),),
               ],
             ),
-
           ],
         ),
       ),
