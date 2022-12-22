@@ -22,14 +22,15 @@ class _MyAppState extends State<MyApp> {
       ),
       home: Scaffold(
         appBar: AppBar(
-          title: Text('Task Organizer'),
+          leading: Container(),
+           title: Text('Task Organizer'),
         ),
         body: ListView(
-          children: [
+           children: [
             Task('Aprender Flutter no café da manhã'),
             Task('Fazer academia'),
-            Task('Meditar'),
-            Task('Meditar'),
+            Task('Ler'),
+            Task('Crossfit'),
             Task('Meditar'),
             Task('Meditar'),
             Task('Meditar'),
@@ -88,14 +89,26 @@ class _TaskState extends State<Task> {
                                 fontSize: 24, overflow: TextOverflow.ellipsis),
                           ),
                         ),
-                        ElevatedButton(
-                            onPressed: () {
-                              setState(() {
-                                nivel++;
-                              });
-                              print(nivel);
-                            },
-                            child: Icon(Icons.arrow_drop_up))
+                        Container(
+                          height: 52,
+                          width: 52,
+                          child: ElevatedButton(
+                              onPressed: () {
+                                setState(() {
+                                  nivel++;
+                                });
+                                print(nivel);
+                              },
+                              child: Column(
+                                mainAxisAlignment: MainAxisAlignment.spaceEvenly,
+                                crossAxisAlignment: CrossAxisAlignment.end,
+                                children: [
+                                  Icon(Icons.arrow_drop_up),
+                                  Text('UP', style:TextStyle(fontSize:12,),)
+                                ],
+                              ),
+                          ),
+                        )
                       ],
                     )),
                 Row(
@@ -104,7 +117,7 @@ class _TaskState extends State<Task> {
                     Padding(
                       padding: const EdgeInsets.all(8.0),
                       child: Container(
-                          child: LinearProgressIndicator(color: Colors.white, value: nivel/10,),
+                          child: LinearProgressIndicator(color: Colors.white, value: nivel/30,),
                           width: 200,
                       ),
                     ),
