@@ -31,7 +31,7 @@ class _MyAppState extends State<MyApp> {
             Task('Praticar Crossfit', 'https://images.vexels.com/media/users/3/154698/isolated/preview/32daeef3d530e95e1b638fc28726996f-overhead-squat-crossfit-silhouette.png'),
             Task('Meditar', 'https://cdn-icons-png.flaticon.com/512/1063/1063642.png'),
             Task('Ler', 'https://cdn-icons-png.flaticon.com/512/1271/1271774.png'),
-            Task('Jogar', ''),
+            Task('Jogar', 'https://cdn-icons-png.flaticon.com/512/1792/1792276.png'),
           ],
         ),
         floatingActionButton: FloatingActionButton(onPressed: () {}),
