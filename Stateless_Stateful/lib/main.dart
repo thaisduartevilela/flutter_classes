@@ -26,19 +26,12 @@ class _MyAppState extends State<MyApp> {
            title: Text('Task Organizer'),
         ),
         body: ListView(
-           children: [
-            Task('Aprender Flutter no café da manhã'),
-            Task('Fazer academia'),
-            Task('Ler'),
-            Task('Crossfit'),
-            Task('Meditar'),
-            Task('Meditar'),
-            Task('Meditar'),
-            Task('Meditar'),
-            Task('Meditar'),
-            Task('Meditar'),
-            Task('Meditar'),
-            Task('Meditar'),
+          children: [
+            Task('Aprender Flutter', 'https://cdn-images-1.medium.com/max/1200/1*5-aoK8IBmXve5whBQM90GA.png'),
+            Task('Praticar Crossfit', 'https://images.vexels.com/media/users/3/154698/isolated/preview/32daeef3d530e95e1b638fc28726996f-overhead-squat-crossfit-silhouette.png'),
+            Task('Meditar', 'https://cdn-icons-png.flaticon.com/512/1063/1063642.png'),
+            Task('Ler', 'https://cdn-icons-png.flaticon.com/512/1271/1271774.png'),
+            Task('Jogar', ''),
           ],
         ),
         floatingActionButton: FloatingActionButton(onPressed: () {}),
@@ -49,8 +42,9 @@ class _MyAppState extends State<MyApp> {
 
 class Task extends StatefulWidget {
   final String nome;
-  const Task(this.nome, {Key? key}) : super(key: key);
+  final String foto;
 
+  const Task(this.nome, this.foto, {Key? key}) : super(key: key);
   @override
   State<Task> createState() => _TaskState();
 }
@@ -80,6 +74,10 @@ class _TaskState extends State<Task> {
                           color: Colors.black26,
                           width: 72,
                           height: 100,
+                          child: Image.network(
+                            widget.foto,
+                            fit: BoxFit.cover,
+                          ),
                         ),
                         Container(
                           width: 200,
