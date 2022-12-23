@@ -27,11 +27,11 @@ class _MyAppState extends State<MyApp> {
         ),
         body: ListView(
           children: [
-            Task('Aprender Flutter', 'https://cdn-images-1.medium.com/max/1200/1*5-aoK8IBmXve5whBQM90GA.png'),
-            Task('Praticar Crossfit', 'https://images.vexels.com/media/users/3/154698/isolated/preview/32daeef3d530e95e1b638fc28726996f-overhead-squat-crossfit-silhouette.png'),
-            Task('Meditar', 'https://cdn-icons-png.flaticon.com/512/1063/1063642.png'),
-            Task('Ler', 'https://cdn-icons-png.flaticon.com/512/1271/1271774.png'),
-            Task('Jogar', 'https://cdn-icons-png.flaticon.com/512/1792/1792276.png'),
+            Task('Praticar Flutter', 'https://play-lh.googleusercontent.com/5e7z5YCt7fplN4qndpYzpJjYmuzM2WSrfs35KxnEw-Ku1sClHRWHoIDSw3a3YS5WpGcI'),
+            Task('Praticar Jiu Jitsu', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3cILQOdgg33d8XaRENFRyQtHjpKbyZL8CHGEqGBFvj0UwGKHFhC0yr9wfZDziNuv5mGA&usqp=CAU'),
+            Task('Meditar', 'https://www.saberviver.pt/wp-content/uploads/2022/05/meditacao-guiada-destaque3-480x300.jpg'),
+            Task('Ler', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7qb5JFNNDh6YgJZOYmU9Q7gSn9kkCRaxnhA&usqp=CAU'),
+            Task('Jogar', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBABnxdPNdLskEXV_TpR5cPnNKrU5GafTMaA&usqp=CAU'),
           ],
         ),
         floatingActionButton: FloatingActionButton(onPressed: () {}),
