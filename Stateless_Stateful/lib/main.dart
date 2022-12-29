@@ -1,11 +1,13 @@
 import 'package:flutter/material.dart';
 
 void main() {
-  runApp(const MyApp());
+  runApp(MyApp());
 }
 
 class MyApp extends StatefulWidget {
-  const MyApp({Key? key}) : super(key: key);
+  MyApp({Key? key}) : super(key: key);
+
+  bool opacidade = true;
 
   @override
   State<MyApp> createState() => _MyAppState();
@@ -25,14 +27,18 @@ class _MyAppState extends State<MyApp> {
           leading: Container(),
            title: Text('Task Organizer'),
         ),
-        body: ListView(
-          children: [
-            Task('Praticar Flutter', 'https://play-lh.googleusercontent.com/5e7z5YCt7fplN4qndpYzpJjYmuzM2WSrfs35KxnEw-Ku1sClHRWHoIDSw3a3YS5WpGcI', '3'),
-            Task('Praticar Jiu Jitsu', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3cILQOdgg33d8XaRENFRyQtHjpKbyZL8CHGEqGBFvj0UwGKHFhC0yr9wfZDziNuv5mGA&usqp=CAU', '2'),
-            Task('Meditar', 'https://www.saberviver.pt/wp-content/uploads/2022/05/meditacao-guiada-destaque3-480x300.jpg', '1'),
-            Task('Ler', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7qb5JFNNDh6YgJZOYmU9Q7gSn9kkCRaxnhA&usqp=CAU','2'),
-            Task('Jogar', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBABnxdPNdLskEXV_TpR5cPnNKrU5GafTMaA&usqp=CAU','3'),
-          ],
+        body:AnimatedOpacity(
+          opacity: opacidade ? 1 : 0,
+          duration: Duration(milliseconds: 1000),
+          child: ListView(
+            children: [
+              Task('Praticar Flutter', 'https://play-lh.googleusercontent.com/5e7z5YCt7fplN4qndpYzpJjYmuzM2WSrfs35KxnEw-Ku1sClHRWHoIDSw3a3YS5WpGcI', '3'),
+              Task('Praticar Jiu Jitsu', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQ3cILQOdgg33d8XaRENFRyQtHjpKbyZL8CHGEqGBFvj0UwGKHFhC0yr9wfZDziNuv5mGA&usqp=CAU', '2'),
+              Task('Meditar', 'https://www.saberviver.pt/wp-content/uploads/2022/05/meditacao-guiada-destaque3-480x300.jpg', '1'),
+              Task('Ler', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcS7qb5JFNNDh6YgJZOYmU9Q7gSn9kkCRaxnhA&usqp=CAU','2'),
+              Task('Jogar', 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRBABnxdPNdLskEXV_TpR5cPnNKrU5GafTMaA&usqp=CAU','3'),
+            ],
+          ),
         ),
         floatingActionButton: FloatingActionButton(onPressed: () {}),
       ),
