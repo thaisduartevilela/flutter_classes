@@ -29,7 +29,7 @@ class _MyAppState extends State<MyApp> {
         ),
         body:AnimatedOpacity(
           opacity: opacidade ? 1 : 0,
-          duration: Duration(milliseconds: 1000),
+          duration: Duration(milliseconds: 1000,),
           child: ListView(
             children: [
               Task('Praticar Flutter', 'https://play-lh.googleusercontent.com/5e7z5YCt7fplN4qndpYzpJjYmuzM2WSrfs35KxnEw-Ku1sClHRWHoIDSw3a3YS5WpGcI', '3'),
@@ -40,7 +40,12 @@ class _MyAppState extends State<MyApp> {
             ],
           ),
         ),
-        floatingActionButton: FloatingActionButton(onPressed: () {}),
+        floatingActionButton: FloatingActionButton(onPressed: () {
+          opacidade = !opacidade;
+
+        }
+        child: Icon(Icons.remove_red_eye),
+        ),
       ),
     );
   }
